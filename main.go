@@ -43,12 +43,15 @@ func main() {
     find := os.Args[2]
     replace := os.Args[3]
 
+
     data := ReadFile(path)
-    
+
+    fmt.Println("Base file")
     fmt.Println(data)
     
     data = strings.Replace(data, find, replace, -1)
     
+    fmt.Println("File After Update")
     fmt.Println(data)
     
     WriteFile(path, data)
